@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelSideMenu = new Panel();
             panelListWord = new Panel();
             panelButtonSortWord = new Panel();
@@ -35,10 +37,14 @@
             panelButtonAddWord = new Panel();
             labelAddWord = new Label();
             panelLogo = new Panel();
+            pictureBox1 = new PictureBox();
             tabControl = new TabControl();
+            imageList1 = new ImageList(components);
             panelSideMenu.SuspendLayout();
             panelButtonSortWord.SuspendLayout();
             panelButtonAddWord.SuspendLayout();
+            panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelSideMenu
@@ -73,6 +79,8 @@
             panelButtonSortWord.Size = new Size(152, 100);
             panelButtonSortWord.TabIndex = 2;
             panelButtonSortWord.MouseClick += panelButtonSortWord_MouseClick;
+            panelButtonSortWord.MouseLeave += panelButtonSortWord_MouseLeave;
+            panelButtonSortWord.MouseHover += panelButtonSortWord_MouseHover;
             // 
             // labelSortWord
             // 
@@ -112,11 +120,23 @@
             // panelLogo
             // 
             panelLogo.BackColor = SystemColors.Menu;
+            panelLogo.Controls.Add(pictureBox1);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(152, 100);
             panelLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(152, 100);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // tabControl
             // 
@@ -127,6 +147,13 @@
             tabControl.Size = new Size(648, 401);
             tabControl.TabIndex = 2;
             // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth8Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "IconeTransladePNG.png");
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -135,16 +162,19 @@
             Controls.Add(tabControl);
             Controls.Add(panelSideMenu);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Memory Stick - By FelipeF-soares";
             panelSideMenu.ResumeLayout(false);
             panelButtonSortWord.ResumeLayout(false);
             panelButtonSortWord.PerformLayout();
             panelButtonAddWord.ResumeLayout(false);
             panelButtonAddWord.PerformLayout();
+            panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -158,5 +188,7 @@
         private TabControl tabControl;
         private Label labelAddWord;
         private Label labelSortWord;
+        private PictureBox pictureBox1;
+        private ImageList imageList1;
     }
 }

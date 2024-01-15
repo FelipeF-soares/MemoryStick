@@ -28,6 +28,13 @@ namespace MemoryStick
             UserControlAddNewWord userControlAddNewWord = new UserControlAddNewWord();
             AddTapPages(name, userControlAddNewWord);
         }
+        private void panelButtonSortWord_MouseClick(object sender, MouseEventArgs e)
+        {
+            tabControl.TabPages.Clear();
+            string name = "tabPageSortWord";
+            UserControlSortWord userControl = new UserControlSortWord();
+            AddTapPages(name, userControl);
+        }
 
         private void panelButtonAddWord_MouseHover(object sender, EventArgs e)
         {
@@ -41,12 +48,16 @@ namespace MemoryStick
             Cursor = Cursors.Default;
         }
 
-        private void panelButtonSortWord_MouseClick(object sender, MouseEventArgs e)
+        private void panelButtonSortWord_MouseHover(object sender, EventArgs e)
         {
-            tabControl.TabPages.Clear();
-            string name = "tabPageSortWord";
-            UserControlSortWord userControl = new UserControlSortWord();
-            AddTapPages(name, userControl);
+            panelButtonSortWord.BackColor = Color.BlueViolet;
+            Cursor = Cursors.Hand;
+        }
+
+        private void panelButtonSortWord_MouseLeave(object sender, EventArgs e)
+        {
+            panelButtonSortWord.BackColor = Color.Transparent;
+            Cursor = Cursors.Default;
         }
     }
 }

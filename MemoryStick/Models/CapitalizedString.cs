@@ -21,8 +21,8 @@ public class CapitalizedString
     public Note OrganizeString()
     {
         Note note = new Note();
-        note.WordInPortuguese = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(WordInPortuguese.ToLower());
-        note.WordInOtherIdioms = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(WordInOtherIdioms.ToLower());
+        note.WordInPortuguese = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(WordInPortuguese.ToLower().Trim());
+        note.WordInOtherIdioms = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(WordInOtherIdioms.ToLower().Trim());
         return note;
     }
 }

@@ -16,8 +16,16 @@ public class SortNote
 
     public Note NoteRandom()
     {
-        Random random = new Random();
-        int index = random.Next(_notes.Count);
-        return _notes[index];
+        try
+        {
+            Random random = new Random();
+            int index = random.Next(_notes.Count);
+            return _notes[index];
+        }
+        catch (Exception)
+        {
+            throw new Exception("The list is empty! Add new words.");
+        }
+       
     }
 }

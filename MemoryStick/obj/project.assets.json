@@ -55,19 +55,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Felipe\\.nuget\\packages\\": {}
+    "C:\\Users\\f150030\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\MemoryStick\\MemoryStick\\MemoryStick.csproj",
+      "projectUniqueName": "C:\\github\\MemoryStick\\MemoryStick\\MemoryStick\\MemoryStick.csproj",
       "projectName": "MemoryStick",
-      "projectPath": "C:\\GitHub\\MemoryStick\\MemoryStick\\MemoryStick.csproj",
-      "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\MemoryStick\\MemoryStick\\obj\\",
+      "projectPath": "C:\\github\\MemoryStick\\MemoryStick\\MemoryStick\\MemoryStick.csproj",
+      "packagesPath": "C:\\Users\\f150030\\.nuget\\packages\\",
+      "outputPath": "C:\\github\\MemoryStick\\MemoryStick\\MemoryStick\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\f150030\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

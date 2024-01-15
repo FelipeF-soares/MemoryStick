@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             groupBoxSortWord = new GroupBox();
+            labelTotalHits = new Label();
+            labelTotalWords = new Label();
+            labelTotalHitsText = new Label();
+            labelTotalWordText = new Label();
             buttonCompare = new Button();
             textBoxTranslation = new TextBox();
             labelTranslation = new Label();
@@ -40,6 +44,10 @@
             // 
             // groupBoxSortWord
             // 
+            groupBoxSortWord.Controls.Add(labelTotalHits);
+            groupBoxSortWord.Controls.Add(labelTotalWords);
+            groupBoxSortWord.Controls.Add(labelTotalHitsText);
+            groupBoxSortWord.Controls.Add(labelTotalWordText);
             groupBoxSortWord.Controls.Add(buttonCompare);
             groupBoxSortWord.Controls.Add(textBoxTranslation);
             groupBoxSortWord.Controls.Add(labelTranslation);
@@ -53,9 +61,46 @@
             groupBoxSortWord.TabIndex = 0;
             groupBoxSortWord.TabStop = false;
             // 
+            // labelTotalHits
+            // 
+            labelTotalHits.AutoSize = true;
+            labelTotalHits.Location = new Point(540, 57);
+            labelTotalHits.Name = "labelTotalHits";
+            labelTotalHits.Size = new Size(13, 15);
+            labelTotalHits.TabIndex = 14;
+            labelTotalHits.Text = "0";
+            // 
+            // labelTotalWords
+            // 
+            labelTotalWords.AutoSize = true;
+            labelTotalWords.Location = new Point(540, 32);
+            labelTotalWords.Name = "labelTotalWords";
+            labelTotalWords.Size = new Size(13, 15);
+            labelTotalWords.TabIndex = 13;
+            labelTotalWords.Text = "0";
+            // 
+            // labelTotalHitsText
+            // 
+            labelTotalHitsText.AutoSize = true;
+            labelTotalHitsText.ImageAlign = ContentAlignment.BottomLeft;
+            labelTotalHitsText.Location = new Point(441, 57);
+            labelTotalHitsText.Name = "labelTotalHitsText";
+            labelTotalHitsText.Size = new Size(59, 15);
+            labelTotalHitsText.TabIndex = 12;
+            labelTotalHitsText.Text = "Total Hits:";
+            // 
+            // labelTotalWordText
+            // 
+            labelTotalWordText.AutoSize = true;
+            labelTotalWordText.Location = new Point(441, 32);
+            labelTotalWordText.Name = "labelTotalWordText";
+            labelTotalWordText.Size = new Size(72, 15);
+            labelTotalWordText.TabIndex = 11;
+            labelTotalWordText.Text = "Total Words:";
+            // 
             // buttonCompare
             // 
-            buttonCompare.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonCompare.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCompare.Location = new Point(150, 303);
             buttonCompare.Name = "buttonCompare";
             buttonCompare.Size = new Size(307, 44);
@@ -78,10 +123,10 @@
             // 
             labelTranslation.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelTranslation.AutoSize = true;
-            labelTranslation.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTranslation.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             labelTranslation.Location = new Point(34, 182);
             labelTranslation.Name = "labelTranslation";
-            labelTranslation.Size = new Size(85, 15);
+            labelTranslation.Size = new Size(77, 16);
             labelTranslation.TabIndex = 8;
             labelTranslation.Text = "Translation:";
             // 
@@ -99,10 +144,10 @@
             // 
             labelWordInPortuguese.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelWordInPortuguese.AutoSize = true;
-            labelWordInPortuguese.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelWordInPortuguese.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             labelWordInPortuguese.Location = new Point(34, 90);
             labelWordInPortuguese.Name = "labelWordInPortuguese";
-            labelWordInPortuguese.Size = new Size(138, 15);
+            labelWordInPortuguese.Size = new Size(128, 16);
             labelWordInPortuguese.TabIndex = 6;
             labelWordInPortuguese.Text = "Word In Portuguese:";
             // 
@@ -139,5 +184,10 @@
         private Label labelWordInPortuguese;
         private Label labelApresent;
         private Button buttonCompare;
+        private Label labelTotalWordText;
+        private Label labelTotalHitsText;
+        private Label labelTotalHits;
+        private Label labelTotalWords;
+        protected Label label1;
     }
 }
